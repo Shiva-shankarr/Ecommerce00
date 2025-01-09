@@ -1,0 +1,14 @@
+html, body {
+  height: 100%;  /* Ensure body takes full height */
+  margin: 0;     /* Remove default margin */
+}
+
+.bg-black {
+  min-height: 150vh; /* Set min height to the full viewport height */
+  display: flex;
+  flex-direction: column; /* Arrange header, content, and footer vertically */
+}
+
+footer {
+  margin-top: auto;  /* Push footer to the bottom */
+}

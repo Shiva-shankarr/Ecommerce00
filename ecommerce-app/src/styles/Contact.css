@@ -1,0 +1,51 @@
+/* main.css */
+.contact-us-container {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .contact-us-container h1 {
+    color: #f1f1f1;
+    text-align: center;
+  }
+  
+  .contact-info {
+    margin-bottom: 30px;
+  }
+  
+  .contact-info h5 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    color: #bbb;
+  }
+  
+  .contact-form {
+    margin-top: 20px;
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .contact-form .form-group label {
+    font-weight: bold;
+  }
+  
+  .submit-btn {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  

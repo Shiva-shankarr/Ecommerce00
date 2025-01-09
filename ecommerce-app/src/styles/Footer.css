@@ -1,0 +1,55 @@
+/* Add border-radius to iframe in the footer */
+footer iframe {
+  border-radius: 8px;
+}
+
+/* Remove text-decoration from footer links and set hover effect */
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #f0f0f0; /* Hover effect for links */
+}
+
+/* Ensure text-white class uses a white color */
+footer .text-white {
+  color: #f0f0f0 !important; /* Ensure all text is white */
+}
+
+/* Set background color of footer bottom */
+footer .bg-black {
+  background-color: #000 !important; /* Background color for footer bottom */
+}
+
+/* Make footer elements spaced and aligned correctly */
+footer .social-icons a {
+  margin: 0 12px; /* Space out social media icons */
+}
+
+/* Ensure footer content spacing */
+footer h5 {
+  margin-bottom: 1rem; /* Add space below the heading */
+}
+
+footer p {
+  margin-bottom: 0.5rem; /* Slight margin for paragraph text */
+}
+
+/* Google Map iframe responsiveness */
+footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer bottom section text */
+footer .text-center {
+  text-align: center; /* Center align the text in footer bottom */
+}
+
+/* Add spacing to the footer links container */
+footer .social-icons {
+  display: flex;
+  justify-content: center; /* Center align social icons */
+  gap: 15px; /* Add gap between icons */
+}

@@ -1,0 +1,69 @@
+[
+    {
+      "name": "Camera",
+      "description": "Capture stunning photos and videos with the latest digital cameras. Equipped with advanced features for professional results.",
+      "price": "599.99 USD",
+      "image": "https://www.livemint.com/lm-img/img/2024/07/03/600x338/camera_buying_guide_1720008963555_1720013606919.jpg",
+      "featured": true,
+      "rating": {
+        "average": 4.5,
+        "reviews": 120
+      }
+    },
+    {
+      "name": "Laptop",
+      "description": "High-performance laptops for work, study, and entertainment. Choose from various brands with powerful processors and sleek designs.",
+      "price": "899.99 USD",
+      "image": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/g-series/g16-7630/media-gallery/white/notebook-g16-7630-nt-white-gallery-1.psd?fmt=pjpg&pscan=auto&scl=1&wid=3500&hei=2625&qlt=100,1&resMode=sharp2&size=3500,2625&chrss=full&imwidth=5000",
+      "featured": true,
+      "rating": {
+        "average": 4.7,
+        "reviews": 85
+      }
+    },
+    {
+      "name": "Shirt",
+      "description": "Comfortable and stylish shirts for every occasion. Made from premium fabrics for a perfect fit and long-lasting wear.",
+      "price": "29.99 USD",
+      "image": "https://img.ltwebstatic.com/images3_pi/2024/08/26/dc/1724643136939c90eb58aaf7c1c976ee5b369d6925_thumbnail_720x.jpg",
+      "featured": false,
+      "rating": {
+        "average": 4.2,
+        "reviews": 60
+      }
+    },
+    {
+      "name": "Shoes",
+      "description": "Step into style with a variety of shoes, from casual sneakers to formal dress shoes, designed for comfort and durability.",
+      "price": "49.99 USD",
+      "image": "https://rukminim2.flixcart.com/image/850/1250/xif0q/shoe/o/7/u/7-pista-7-roaster-white-original-imagwdw5fgx2hepm.jpeg?q=90&crop=false",
+      "featured": true,
+      "rating": {
+        "average": 4.8,
+        "reviews": 200
+      }
+    },
+    {
+      "name": "Mobile",
+      "description": "Stay connected with the latest smartphones featuring cutting-edge technology, fast processors, and stunning displays.",
+      "price": "699.99 USD",
+      "image": "https://m.media-amazon.com/images/I/61cDF+Iat-L.jpg",
+      "featured": false,
+      "rating": {
+        "average": 4.6,
+        "reviews": 150
+      }
+    },
+    {
+      "name": "Bag",
+      "description": "Stylish and functional bags for every need, including backpacks, tote bags, and travel bags, designed to keep your essentials safe.",
+      "price": "39.99 USD",
+      "image": "https://m.media-amazon.com/images/I/61yMAsvoVSL._AC_UY1100_.jpg",
+      "featured": false,
+      "rating": {
+        "average": 4.3,
+        "reviews": 45
+      }
+    }
+  ]
+  

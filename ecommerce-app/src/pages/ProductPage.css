@@ -1,0 +1,245 @@
+/* Custom search bar styling */
+.custom-search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure full width */
+}
+
+.custom-search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    background-color: white; /* Set background to white */
+    color: black; /* Set text color to black for visibility */
+}
+
+/* Optional: Style for the input box on focus */
+.custom-search-input:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #4CAF50; /* Change border color on focus */
+    background-color: #f0f0f0; /* Light background on focus */
+    color: black; /* Keep text color black */
+}
+
+.custom-search-button {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px; /* Increased padding for better button appearance */
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the search box */
+.search-input {
+  background-color: white; /* Set a white background to make the text visible */
+  color: black; /* Ensure text color is black */
+  border: 1px solid #ccc; /* Add a light border around the input */
+  padding: 10px; /* Adjust padding for better spacing */
+  font-size: 14px; /* Adjust font size for better readability */
+}
+
+/* Optional: Style for the input box on focus */
+.search-input:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #4CAF50; /* Change border color on focus */
+  background-color: #f0f0f0; /* Light background on focus */
+  color: black; /* Keep text color black */
+}
+
+/* Filter Dropdown */
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.filter-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.filter-dropdown {
+  position: relative;
+}
+
+.filter-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Product card styling */
+.product-card {
+    background-color: #000; /* Set card background to black */
+    color: #fff; /* Set text color to white */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Initial shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5); /* Light white shadow on hover */
+}
+
+/* Adjust Card Image to make it smaller with padding between image and card border */
+.product-card .card-img {
+    width: 70%; /* Set width to 70% of the card */
+    height: auto; /* Maintain aspect ratio of the image */
+    object-fit: contain; /* Ensure the image fits without distortion */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Add padding between the image and card border */
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: 0 auto; /* Center the image within the card */
+}
+
+.product-card .card-body {
+    padding: 15px;
+}
+
+.product-card .card-title, 
+.product-card .card-text {
+    color: #fff; /* Ensures all text is white */
+}
+
+.product-card .btn {
+    background-color: #0412b0;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px; /* Ensure button has proper padding */
+}
+
+.product-card .btn:hover {
+    background-color: #0056b3;
+}
+/* For responsiveness */
+@media (max-width: 767px) {
+  .custom-search-bar {
+    flex-direction: column; /* Stacks the search bar elements */
+  }
+
+  .custom-search-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .custom-search-button {
+    width: 100%;
+    margin-top: 10px; /* Adds space above the button when stacked */
+  }
+
+  .filter-item {
+    margin-top: 20px;
+  }
+
+  .filter-select {
+    margin-bottom: 10px; /* Add space between filter dropdowns */
+  }
+}
+
+/* Remove underline from 'View Product' button */
+.product-card .btn {
+  text-decoration: none; /* Remove underline */
+}
+
+/* Align Buy Now and Call Now buttons in a single row and reduce button size */
+.card-body .btn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .buy-now-btn,
+  .call-now-btn {
+    padding: 8px 12px; /* Smaller padding */
+    font-size: 14px; /* Smaller text */
+    border-radius: 5px;
+    text-align: center;
+    width: 48%; /* Ensures both buttons are of the same size */
+  }
+  
+  /* Adjust Card Image */
+  .product-card .card-img {
+    width: 100%;
+    height: 180px; /* Smaller height */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Padding between image and card content */
+  }
+  
+  /* Equalize card height and width */
+  .product-card {
+    width: 300px; /* Set a fixed width */
+    height: auto; /* Allow the height to adjust based on content */
+    margin: 10px; /* Add margin to give some space between cards */
+    padding: 10px; /* Reduce the padding inside the card */
+  }
+  
+  .card-body {
+    flex-grow: 1; /* Ensures the body fills the space */
+  }
+  
+  /* Responsive design for cards */
+  @media (max-width: 767px) {
+    .product-card {
+      height: 100%; /* Ensure equal height even on smaller screens */
+    }
+  
+    .card-img {
+      height: 150px; /* Adjust for small screen sizes */
+    }
+  }
+  
+  /* Buy Now Button Styling */
+  .buy-now-btn {
+    background-color: #63288a; /* Customize the color */
+    color: white; /* Text color */
+    border-radius: 5px;
+    padding: 10px 20px; /* Add padding */
+    width: 100%; /* Ensure button is full width */
+    margin-bottom: 10px; /* Add space between buttons */
+  }
+  
+  .buy-now-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Call Now Button Styling */
+  .call-now-btn {
+    background-color: #247b15; /* Customize the color */
+    color: white; /* Text color */
+    border-radius: 5px;
+    padding: 10px 20px; /* Add padding */
+    width: 100%; /* Ensure button is full width */
+  }
+  
+  .call-now-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  .card {
+    margin-bottom: 30px; /* Adjust this value to add more space between cards */
+  }
+/* Zoom effect on hover */
+.product-card:hover .product-img {
+    transform: scale(1.1); /* Zoom in by 10% */
+  }  
