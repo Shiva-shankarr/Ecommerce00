@@ -133,29 +133,37 @@ const HomePage = () => {
       </section>
 
       {/* Featured Products */}
-      <section className=" shiva bg-gray-50 py-16">
-        <h1 className="text-3xl font-bold text-center mb-6 mt-2">Featured Products</h1>
-        <p className="text-lg mb-6 text-center">
-          Explore our selection of top-rated products, carefully curated to offer you the best quality and value. From cameras to smartphones, find the perfect product for your needs.
-        </p>
-        <Row xs={1} sm={2} md={4} className="g-4">
-          {products.map((product, index) => (
-            <Col key={index}>
-              <Card className="product-card">
-                <Card.Img variant="top" src={product.image} style={{ padding: '10px', objectFit: 'cover', height: '200px' }} />
-                <Card.Body>
-                  <Card.Title>{product.name}</Card.Title>
-                  <Card.Text>{product.price}</Card.Text>
-                  <Card.Text>{product.rating}</Card.Text>
-                  <Link to={`/product/${index + 1}`} state={{ product }} className="btn btn-primary">
-  View Product
-</Link>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </section>
+<section className="shiva py-16 text-center">
+  <h1 className="text-3xl font-bold mb-6">Featured Products</h1>
+  <p className="text-lg mb-6">
+    Explore our selection of top-rated products, carefully curated to offer you the best quality and value. From cameras to smartphones, find the perfect product for your needs.
+  </p>
+  <Row xs={1} sm={2} md={4} className="g-4">
+    {products.map((product, index) => (
+      <Col key={index}>
+        <Card className="product-card">
+          <Card.Img
+            variant="top"
+            src={product.image}
+            style={{ padding: "10px", objectFit: "cover", height: "200px" }}
+          />
+          <Card.Body>
+            <Card.Title>{product.name}</Card.Title>
+            <Card.Text>{product.price}</Card.Text>
+            <Card.Text>{product.rating}</Card.Text>
+            <Link
+              to={`/product/${index + 1}`}
+              state={{ product }}
+              className="btn btn-primary"
+            >
+              View Product
+            </Link>
+          </Card.Body>
+        </Card>
+      </Col>
+    ))}
+  </Row>
+</section>
 
       {/* Call to Action */}
       <section className="bg-black text-white py-12 text-center">

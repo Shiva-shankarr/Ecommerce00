@@ -7,24 +7,24 @@ const ContactUs = () => {
     <Container className="my-5">
       <Row>
         {/* Heading Section */}
-        <Col xs={12} className="text-center mb-4">
+        <Col xs={12} className="text-center mb-4"><br></br><br></br><br></br><br></br><br></br><br></br>
           <h2>Contact Us</h2>
           <p>We would love to hear from you! Feel free to reach out to us using the following information.</p>
         </Col>
         
-        {/* Contact Information Section */}
-        <Col xs={12} md={4} className="text-center text-md-left mb-4 mb-md-0">
-          <h5>Contact Information</h5>
-          <p>
-            <FaMapMarkerAlt /> Address: Hyderabad, Telangana, India
-          </p>
-          <p>
-            <FaPhoneAlt /> Phone: +91 9876543210
-          </p>
-          <p>
-            <FaRegClock /> Timing: Mon - Fri, 9:00 AM - 6:00 PM
-          </p>
-        </Col>
+       {/* Contact Information Section */}
+<Col xs={12} md={4} className="text-center text-md-left mb-4 mb-md-0">
+  <h5>Contact Information</h5>
+  <p>
+    <FaMapMarkerAlt style={{ marginRight: '5px' }} /> Address: Hyderabad, Telangana, India
+  </p>
+  <p>
+    <FaPhoneAlt style={{ marginRight: '5px' }} /> Phone: +91 9876543210
+  </p>
+  <p>
+    <FaRegClock style={{ marginRight: '5px' }} /> Timing: Mon - Fri, 9:00 AM - 6:00 PM
+  </p>
+</Col>
 
         {/* Contact Form Section */}
         <Col xs={12} md={8}>

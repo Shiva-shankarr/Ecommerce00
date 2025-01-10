@@ -1,5 +1,3 @@
-// src/components/Filter.js
-
 import React, { useState } from 'react';
 import { FaFilter, FaDollarSign, FaStar } from 'react-icons/fa'; // Using react-icons for filter, price, and rating icons
 
@@ -20,24 +18,42 @@ const Filter = ({ onPriceChange, onRatingChange }) => {
 
   return (
     <div className="filter-container">
-      <div className="filter-title" onClick={toggleFilter}>
-        <FaFilter className="filter-icon" /> Filter by
+      {/* Filter by Section */}
+      <div 
+        className="filter-title d-flex align-items-center"
+        onClick={toggleFilter}
+        aria-expanded={isFilterOpen}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => e.key === "Enter" && toggleFilter()}
+      >
+        <FaFilter className="filter-icon me-2" /> Filter by
       </div>
 
       {isFilterOpen && (
         <div className="filter-options">
           {/* Price Filter Section */}
           <div className="filter-item">
-            <div className="filter-label" onClick={togglePrice}>
-              <FaDollarSign className="filter-icon" /> Price
+            <div 
+              className="filter-label d-flex align-items-center"
+              onClick={togglePrice}
+              aria-expanded={isPriceOpen}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === "Enter" && togglePrice()}
+            >
+              <FaDollarSign className="filter-icon me-2" /> Price
             </div>
             {isPriceOpen && (
-              <div className="filter-dropdown">
-                <select 
-                  onChange={e => onPriceChange(e.target.value)} 
-                  className="filter-select"
+              <div className="filter-dropdown mt-2">
+                <select
+                  onChange={(e) => onPriceChange(e.target.value)}
+                  className="form-select"
+                  aria-label="Filter by Price"
                 >
-                  <option value="">Choose Price</option>
+                  <option value="" disabled selected>
+                    Choose Price
+                  </option>
                   <option value="low-high">Low to High</option>
                   <option value="high-low">High to Low</option>
                 </select>
@@ -47,16 +63,26 @@ const Filter = ({ onPriceChange, onRatingChange }) => {
 
           {/* Rating Filter Section */}
           <div className="filter-item">
-            <div className="filter-label" onClick={toggleRating}>
-              <FaStar className="filter-icon" /> Rating
+            <div 
+              className="filter-label d-flex align-items-center"
+              onClick={toggleRating}
+              aria-expanded={isRatingOpen}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === "Enter" && toggleRating()}
+            >
+              <FaStar className="filter-icon me-2" /> Rating
             </div>
             {isRatingOpen && (
-              <div className="filter-dropdown">
-                <select 
-                  onChange={e => onRatingChange(e.target.value)} 
-                  className="filter-select"
+              <div className="filter-dropdown mt-2">
+                <select
+                  onChange={(e) => onRatingChange(e.target.value)}
+                  className="form-select"
+                  aria-label="Filter by Rating"
                 >
-                  <option value="">Choose Rating</option>
+                  <option value="" disabled selected>
+                    Choose Rating
+                  </option>
                   <option value="low-high">Low to High</option>
                   <option value="high-low">High to Low</option>
                 </select>

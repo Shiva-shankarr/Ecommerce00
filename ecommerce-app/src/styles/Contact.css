@@ -48,4 +48,8 @@
   .submit-btn:hover {
     background-color: #0056b3;
   }
-  
+
+  /* In your CSS file */
+.icon-spacing {
+  margin-right: 5px; /* Adjust the value as needed */
+}

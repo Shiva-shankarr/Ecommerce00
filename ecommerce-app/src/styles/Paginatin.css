@@ -1,0 +1,27 @@
+/* Adjust button styles for better interaction */
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Add focus ring for better accessibility */
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(59, 130, 246, 0.5); /* Blue glow */
+  }
+  
+  /* Mobile-friendly adjustments */
+  @media (max-width: 640px) {
+    .flex-wrap {
+      flex-direction: row; /* Ensure buttons wrap correctly */
+    }
+  
+    button {
+      padding: 0.5rem 1rem; /* Reduce button size for smaller screens */
+      font-size: 0.875rem; /* Slightly smaller font size */
+    }
+  }
+  

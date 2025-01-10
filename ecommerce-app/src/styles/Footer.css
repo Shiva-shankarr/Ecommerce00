@@ -1,55 +1,71 @@
-/* Add border-radius to iframe in the footer */
+/* Responsive styling for footer */
+
+/* Adjust iframe for small screens */
 footer iframe {
   border-radius: 8px;
-}
-
-/* Remove text-decoration from footer links and set hover effect */
-footer a {
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #f0f0f0; /* Hover effect for links */
-}
-
-/* Ensure text-white class uses a white color */
-footer .text-white {
-  color: #f0f0f0 !important; /* Ensure all text is white */
-}
-
-/* Set background color of footer bottom */
-footer .bg-black {
-  background-color: #000 !important; /* Background color for footer bottom */
-}
-
-/* Make footer elements spaced and aligned correctly */
-footer .social-icons a {
-  margin: 0 12px; /* Space out social media icons */
-}
-
-/* Ensure footer content spacing */
-footer h5 {
-  margin-bottom: 1rem; /* Add space below the heading */
-}
-
-footer p {
-  margin-bottom: 0.5rem; /* Slight margin for paragraph text */
-}
-
-/* Google Map iframe responsiveness */
-footer iframe {
   max-width: 100%;
   height: auto;
 }
 
-/* Footer bottom section text */
-footer .text-center {
-  text-align: center; /* Center align the text in footer bottom */
-}
-
-/* Add spacing to the footer links container */
+/* Center and space out social icons */
 footer .social-icons {
   display: flex;
-  justify-content: center; /* Center align social icons */
-  gap: 15px; /* Add gap between icons */
+  justify-content: center;
+  gap: 20px; /* Ensure sufficient spacing for icons */
+}
+
+/* Ensure footer text aligns properly on small devices */
+footer h5 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem; /* Adjust for readability */
+}
+
+footer p {
+  font-size: 0.9rem; /* Slightly reduce font size for smaller screens */
+}
+
+/* Ensure contact icons are spaced and aligned */
+footer .fa-icon {
+  margin-right: 0.5rem;
+}
+
+/* Add hover effect to social media links */
+footer a {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+footer a:hover {
+  color: #ff9800; /* Add a vibrant hover color */
+}
+
+/* Footer background and text styling */
+footer .bg-black {
+  background-color: #000;
+  color: #fff;
+}
+
+footer .text-white {
+  color: #f0f0f0 !important;
+}
+
+/* Flexbox adjustments for different screen sizes */
+@media (max-width: 768px) {
+  footer .social-icons {
+    gap: 15px; /* Reduce gap on smaller screens */
+  }
+
+  footer h5 {
+    font-size: 1.1rem;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  footer .social-icons {
+    flex-wrap: wrap; /* Wrap icons to avoid overlap */
+  }
 }

@@ -1,0 +1,30 @@
+/* Add padding to body to prevent content overlap with the fixed header */
+body {
+    padding-top: 70px;
+  }
+  
+  /* Header title styles for better scaling */
+  header h1 {
+    font-size: 1.5rem; /* Default for smaller screens */
+  }
+  
+  @media (min-width: 768px) {
+    header h1 {
+      font-size: 2.5rem; /* Larger font for tablets and desktops */
+    }
+  }
+  
+  /* Add hover effect for buttons */
+  .nav-link:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s ease;
+  }
+  
+  /* Adjust navbar button for small screens */
+  .navbar-toggler {
+    border: none;
+    background-color: #fff;
+    color: #000;
+  }
+  

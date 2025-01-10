@@ -6,7 +6,7 @@ const Header = () => {
     <header className="bg-black text-white py-1 shadow-md fixed-top w-100 z-10">
       <div className="container-fluid px-4 d-flex justify-content-between align-items-center">
         {/* Website Title */}
-        <h1 className="text-4xl font-bold tracking-wide cursor-pointer text-right md:text-left w-full m-2">
+        <h1 className="text-4xl font-bold tracking-wide cursor-pointer text-left w-full m-2">
           ShopWay
         </h1>
       </div>

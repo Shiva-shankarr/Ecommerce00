@@ -1,3 +1,33 @@
+App.css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg-black {
+  background-color: black; /* Ensure background is black */
+  min-height: 100vh; /* Set min height to full viewport height */
+  display: flex;
+  flex-direction: column; /* Arrange header, content, and footer vertically */
+}
+
+.container {
+  max-width: 100%; /* Ensure container takes full width */
+  padding: 0; /* Remove padding */
+}
+
+footer {
+  margin-top: auto;  /* Push footer to the bottom */
+}
+
+/* Add this at the top of App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
 html, body {
   height: 100%;  /* Ensure body takes full height */
   margin: 0;     /* Remove default margin */
@@ -7,8 +37,5 @@ html, body {
   min-height: 150vh; /* Set min height to the full viewport height */
   display: flex;
   flex-direction: column; /* Arrange header, content, and footer vertically */
-}
-
-footer {
-  margin-top: auto;  /* Push footer to the bottom */
+  align-items: center; /* Center items horizontally */
 }
