@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Card, Spinner } from "react-bootstrap"; // Import Spinner
+import { Row, Col, Card, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Pagination from "../components/Pagination";
 import { FaSearch, FaList, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import './ProductPage.css';
+import items from "../data/items.json"; // Import static data
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
@@ -12,7 +13,7 @@ const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedPriceRange, setSelectedPriceRange] = useState("");
   const [selectedRating, setSelectedRating] = useState("");
-  const [loading, setLoading] = useState(true); // Add loading state
+  const [loading, setLoading] = useState(true);
 
   // Pagination States
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,16 +21,14 @@ const ProductsPage = () => {
 
   // Fetch products on mount
   useEffect(() => {
-    const fetchProducts = async () => {
+    const fetchProducts = () => {
       try {
-        const response = await fetch("https://fakestoreapi.com/products");
-        const data = await response.json();
-        setProducts(data);
-        setFilteredProducts(data);
-        setLoading(false); // Set loading to false after data is fetched
+        setProducts(items); // Use static JSON data
+        setFilteredProducts(items);
+        setLoading(false); // Set loading to false
       } catch (error) {
-        console.error("Error fetching products:", error);
-        setLoading(false); // In case of an error, stop loading
+        console.error("Error loading products:", error);
+        setLoading(false); // Stop loading in case of error
       }
     };
 
@@ -77,7 +76,6 @@ const ProductsPage = () => {
 
   // Handle Search
   const handleSearchChange = (e) => setSearchQuery(e.target.value);
-  const handleSearchClick = () => setSearchQuery(searchQuery);
 
   // Handle Category Change
   const handleCategoryChange = (value) => setSelectedCategory(value);
@@ -110,7 +108,6 @@ const ProductsPage = () => {
 
       {/* Search and Filter */}
       <div className="row mb-4 align-items-center">
-        {/* Custom Search Bar */}
         <div className="col-lg-6 col-md-12 mb-3 mb-lg-0">
           <div className="custom-search-bar">
             <input
@@ -118,7 +115,7 @@ const ProductsPage = () => {
               className="custom-search-input"
               placeholder="Search for products..."
               value={searchQuery}
-              onChange={handleSearchChange} // Handles search directly
+              onChange={handleSearchChange}
             />
             <button className="custom-search-button">
               <FaSearch />
@@ -126,14 +123,12 @@ const ProductsPage = () => {
           </div>
         </div>
 
-        {/* Filter By Price and Rating */}
         <div className="col-lg-3 col-md-6 mb-3 mb-md-0">
           <div className="filter-item">
             <div className="filter-label">
               <FaList className="filter-icon" /> Filter By
             </div>
             <div className="filter-dropdown">
-              {/* Price Filter */}
               <select
                 onChange={(e) => handlePriceChange(e.target.value)}
                 className="filter-select"
@@ -145,7 +140,6 @@ const ProductsPage = () => {
                 <option value="high">Above $150</option>
               </select>
 
-              {/* Rating Filter */}
               <select
                 onChange={(e) => handleRatingChange(Number(e.target.value))}
                 className="filter-select"
@@ -162,7 +156,6 @@ const ProductsPage = () => {
           </div>
         </div>
 
-        {/* Category By */}
         <div className="col-lg-3 col-md-6 mb-3 mb-md-0">
           <div className="filter-item">
             <div className="filter-label">
@@ -186,7 +179,6 @@ const ProductsPage = () => {
         </div>
       </div>
 
-      {/* Show Loading Spinner */}
       {loading ? (
         <div className="text-center">
           <Spinner animation="border" variant="primary" />
@@ -194,18 +186,16 @@ const ProductsPage = () => {
         </div>
       ) : (
         <div>
-          {/* Product Cards */}
           <Row xs={1} sm={2} md={3} className="g-4">
             {currentProducts.length > 0 ? (
               currentProducts.map((product) => (
                 <Col key={product.id}>
                   <Card className="product-card" style={{ backgroundColor: "black", color: "white" }}>
-                    {/* Card Image */}
                     <Card.Img
                       variant="top"
                       src={product.image}
                       className="card-img"
-                      style={{ padding: "10px" }} // Padding between image and card border
+                      style={{ padding: "10px" }}
                     />
                     <Card.Body>
                       <Card.Title>{product.title}</Card.Title>
@@ -216,7 +206,6 @@ const ProductsPage = () => {
                         View Product
                       </Link>
 
-                      {/* Button Container */}
                       <div className="btn-container mt-3">
                         <button
                           className="buy-now-btn"
@@ -242,14 +231,13 @@ const ProductsPage = () => {
         </div>
       )}
 
-      {/* Pagination Component */}
       <Pagination
         currentPage={currentPage}
         totalItems={filteredProducts.length}
         itemsPerPage={itemsPerPage}
         onPageChange={paginate}
       />
-      <br></br><br></br>
+      <br /><br />
     </div>
   );
 };
